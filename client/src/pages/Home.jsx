@@ -1,7 +1,7 @@
 
 // import Lottie from 'lottie-react';
 import Animation from "../Animation.json";
-// import React, { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 import { Analytics } from "../../components/Analytics";
 
@@ -9,6 +9,16 @@ export const Home = () => {
 //   useEffect(()=>{
 //     document.title="Rider Infinity"
 //   },[]);
+useEffect(() => {
+  const script = document.createElement('script');
+  script.src = 'https://cdn.lordicon.com/lordicon.js';
+  script.async = true;
+  document.body.appendChild(script);
+
+  return () => {
+    document.body.removeChild(script);
+  };
+}, []);
     return (
       <>
         <main>
@@ -29,11 +39,18 @@ export const Home = () => {
                   </a>
                 </div>
               </div>
+              <lord-icon
+                src="https://cdn.lordicon.com/iibtcwna.json"
+                trigger="loop"
+
+                style={{ width: '500px', height: '500px' }}
+              ></lord-icon>
   
               {/* hero images  */}
               {/* <div className="hero-image">
               <Lottie animationData={Animation} style={{ width: '400px', height: '400px' }} />                
               </div> */}
+              
             </div>
           </section>
         </main>
