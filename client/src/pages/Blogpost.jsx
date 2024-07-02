@@ -1,9 +1,76 @@
+// import { format } from "date-fns";
+// import React, { useState, useEffect } from "react";
+// import { Link, useParams } from "react-router-dom";
+// import { client } from "../lib/client";
+// import {PortableText} from "@portabletext/react";
+// import { Profile } from "../../components/Profile";
+
+// export const Blogpost = () => {
+//     const [blogpost, setBlogpost] = useState([]);
+//     const { slug } = useParams();
+
+//     useEffect(() => {
+//         client
+//             .fetch(
+//                 `*[slug.current == "${slug}"] {
+//           title,
+//           slug,
+//           body,
+//           publishedAt,
+//           mainImage {
+//             asset -> {
+//               _id,
+//               url
+//             },
+//             alt,
+//           },
+//           "name":author->name
+//         } `
+//             )
+//             .then((data) => {
+//                 setBlogpost(data[0]);
+
+//             })
+//             .catch(console.error);
+//     }, [slug]);
+
+
+//     useEffect(()=>{
+//         document.title=`Reading | ${blogpost.title}`
+//     },[blogpost.title])
+//     return (
+//        <>
+//             {blogpost && <section>
+//                 {blogpost.mainImage && <img src={blogpost.mainImage.asset.url} alt={blogpost.mainImage.alt} />}
+//                 <h1>{blogpost.title}</h1>
+//                 <p className="text-sm">
+//                     By {blogpost.name} {blogpost.publishedAt && <>
+//                         &middot;
+//                     {format(new Date(blogpost.publishedAt), "dd MMMM yyyy")}</>}
+//                 </p>
+//                 <PortableText value={blogpost.body}/>
+//             </section>}
+//             <div className="max-w-7xl mx-auto px-5 mb-20 flex items-end justify-end">
+//                 <Link to="/blog" className="bg-white py-2 px-8 rounded shadow text-slate-800 tracking-wide hover:opacity-75 transition-all duration-200 w-full md:w-auto">
+//                     Read all blog posts
+//                 </Link>
+//             </div>
+//             <Profile/>
+           
+//         </>
+
+//     )
+
+// }
+
+
 import { format } from "date-fns";
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 import { client } from "../lib/client";
-import {PortableText} from "@portabletext/react";
+import { PortableText } from "@portabletext/react";
 import { Profile } from "../../components/Profile";
+import "./Blogpost.css"; // Importing the new CSS file
 
 export const Blogpost = () => {
     const [blogpost, setBlogpost] = useState([]);
@@ -29,39 +96,48 @@ export const Blogpost = () => {
             )
             .then((data) => {
                 setBlogpost(data[0]);
-
             })
             .catch(console.error);
     }, [slug]);
 
+    useEffect(() => {
+        document.title = `Reading | ${blogpost.title}`;
+    }, [blogpost.title]);
 
-    useEffect(()=>{
-        document.title=`Reading | ${blogpost.title}`
-    },[blogpost.title])
     return (
-       <>
-            {blogpost && <section>
-                {blogpost.mainImage && <img src={blogpost.mainImage.asset.url} alt={blogpost.mainImage.alt} />}
-                <h1>{blogpost.title}</h1>
-                <p className="text-sm">
-                    By {blogpost.name} {blogpost.publishedAt && <>
-                        &middot;
-                    {format(new Date(blogpost.publishedAt), "dd MMMM yyyy")}</>}
-                </p>
-                <PortableText value={blogpost.body}/>
-            </section>}
-            <div className="max-w-7xl mx-auto px-5 mb-20 flex items-end justify-end">
-                <Link to="/blog" className="bg-white py-2 px-8 rounded shadow text-slate-800 tracking-wide hover:opacity-75 transition-all duration-200 w-full md:w-auto">
+        <>
+            {blogpost && (
+                <section className="blogpost-section">
+                    {blogpost.mainImage && (
+                        <img
+                            src={blogpost.mainImage.asset.url}
+                            alt={blogpost.mainImage.alt}
+                            className="blogpost-image"
+                        />
+                    )}
+                    <h1 className="blogpost-title">{blogpost.title}</h1>
+                    <p className="blogpost-meta">
+                        By {blogpost.name}{" "}
+                        {blogpost.publishedAt && (
+                            <>
+                                &middot;{" "}
+                                {format(new Date(blogpost.publishedAt), "dd MMMM yyyy")}
+                            </>
+                        )}
+                    </p>
+                    <PortableText value={blogpost.body} className="blogpost-body" />
+                </section>
+            )}
+            <div className="read-all-container">
+                <Link to="/blog" className="read-all">
                     Read all blog posts
                 </Link>
             </div>
-            <Profile/>
-           
+            <Profile />
         </>
+    );
+};
 
-    )
-
-}
 
 // import { useState, useEffect } from "react"
 
