@@ -9,74 +9,52 @@ body {
 h3, p {
     margin: 0;
 }
-
-/* Profile Container */
 .profile-container {
-    max-width: 600px;
-    margin: 40px auto;
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    background: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+    display: flex;
+    align-items: center;
     padding: 20px;
+    
+    margin: auto;
 }
 
-@media (min-width: 768px) {
-    .profile-container {
-        grid-template-columns: repeat(2, 1fr);
-        align-items: center;
-    }
-}
-
-/* Profile Image */
 .profile-image-container {
-    overflow: hidden;
+    margin-right: 20px;
 }
 
 .profile-image {
-    width: 100%;
-    height: auto;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%; /* Circular image */
     object-fit: cover;
 }
 
-@media (min-width: 768px) {
-    .profile-image {
-        height: 256px;
-    }
-}
-
-/* Profile Text */
 .profile-text-container {
-    padding-right: 20px;
+    flex: 1;
 }
 
 .profile-name {
-    font-size: 1.75rem;
-    margin-bottom: 16px;
+    font-size: 1.5rem;
+    margin: 10px 0;
+    color: #333;
 }
 
-.profile-description {
-    font-size: 1rem;
-    color: #4a5568;
-}
-
-/* Social Links */
 .profile-social-links {
     display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-top: 16px;
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.profile-social-links li {
+    margin-right: 10px;
 }
 
 .social-icon {
     font-size: 1.5rem;
-    color: #718096;
-    transition: color 0.2s;
+    color: #1e90ff; /* Light blue color for icons */
+    transition: color 0.3s ease;
 }
 
 .social-icon:hover {
-    color: #2d3748;
+    color: #007BFF; /* Darker blue on hover */
 }

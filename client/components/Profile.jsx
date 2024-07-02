@@ -26,33 +26,63 @@
 // }
 
 
+// import React from "react";
+// import { GrFacebook } from "react-icons/gr";
+// import { FaTwitter } from "react-icons/fa";
+// import "./Profile.css"; // Importing the new CSS file
+
+// export const Profile = () => {
+//     return (
+//         <>
+//             <div className="profile-container">
+//                 <article className="profile-image-container">
+//                     <img
+//                         className="profile-image"
+//                         src="..\..\src\images\IMG-20220624-WA0001.jpg"
+//                         alt="Gaurav Chaudhary"
+//                     />
+//                 </article>
+//                 <article className="profile-text-container">
+//                     <h3 className="profile-name">Gaurav Chaudhary</h3>
+//                     <p className="profile-description">
+//                         Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum unde sapiente distinctio vitae mollitia consequuntur?
+//                     </p>
+//                     <ul className="profile-social-links">
+//                         <li><GrFacebook className="social-icon" /></li>
+//                         <li><FaTwitter className="social-icon" /></li>
+//                     </ul>
+//                 </article>
+//             </div>
+//         </>
+//     );
+// };
+
+
 import React from "react";
-import { GrFacebook } from "react-icons/gr";
-import { FaTwitter } from "react-icons/fa";
+import { GrFacebook, GrInstagram } from "react-icons/gr";
+import { FaTwitter, FaWhatsapp } from "react-icons/fa";
 import "./Profile.css"; // Importing the new CSS file
 
 export const Profile = () => {
     return (
-        <>
-            <div className="profile-container">
-                <article className="profile-image-container">
-                    <img
-                        className="profile-image"
-                        src="https://images.pexels.com/photos/34534/people-peoples-homeless-male.jpg?auto=compress&cs=tinysrgb&w=400"
-                        alt="Gaurav Chaudhary"
-                    />
-                </article>
-                <article className="profile-text-container">
-                    <h3 className="profile-name">Gaurav Chaudhary</h3>
-                    <p className="profile-description">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum unde sapiente distinctio vitae mollitia consequuntur?
-                    </p>
-                    <ul className="profile-social-links">
-                        <li><GrFacebook className="social-icon" /></li>
-                        <li><FaTwitter className="social-icon" /></li>
-                    </ul>
-                </article>
-            </div>
-        </>
+        <div className="profile-container">
+            <article className="profile-image-container">
+                <img
+                    className="profile-image"
+                    src="..\..\src\images\IMG-20220624-WA0001.jpg"
+                    alt="Gaurav Chaudhary"
+                />
+            </article>
+            <article className="profile-text-container">
+                <h3 className="profile-name">Gaurav Chaudhary</h3>
+                <ul className="profile-social-links">
+                    <li><GrFacebook className="social-icon" /></li>
+                    <li><GrInstagram className="social-icon" /></li>
+                    <li><FaTwitter className="social-icon" /></li>
+                    <li><FaWhatsapp className="social-icon" /></li>
+                </ul>
+            </article>
+        </div>
     );
 };
+

@@ -197,7 +197,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import { Newsletter } from "../../components/Newsletter";
+// import { Newsletter } from "../../components/Newsletter";
 import { Profile } from "../../components/Profile";
 import { client } from "../lib/client";
 import { format } from "date-fns";
@@ -294,7 +294,7 @@ export const Homeblog = () => {
                     Read all blog posts
                 </Link>
             </div>
-            <Newsletter />
+            {/* <Newsletter /> */}
             <Profile />
         </>
     );
