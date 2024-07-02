@@ -16,7 +16,7 @@ export const Home = () => {
             <div className="container grid grid-two-cols">
               <div className="hero-content">
                 <p>Lets Create Something Different</p>
-                <h1>Welcome to Rider Infinityyy</h1>
+                <h1>Welcome to Rider Infinity</h1>
                 <p>
                 I'm a software developer and entrepreneur, running Rider Infinity. With years of experience in coding and design, I specialize in creating user-friendly software solutions that simplify complex tasks. Let's build something great together.
                 </p>
