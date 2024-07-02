@@ -1,5 +1,5 @@
 
-import Lottie from 'lottie-react';
+// import Lottie from 'lottie-react';
 import Animation from "../Animation.json";
 // import React, { useState, useEffect } from "react";
 
@@ -31,9 +31,9 @@ export const Home = () => {
               </div>
   
               {/* hero images  */}
-              <div className="hero-image">
+              {/* <div className="hero-image">
               <Lottie animationData={Animation} style={{ width: '400px', height: '400px' }} />                
-              </div>
+              </div> */}
             </div>
           </section>
         </main>
