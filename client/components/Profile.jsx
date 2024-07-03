@@ -69,7 +69,7 @@ export const Profile = () => {
             <article className="profile-image-container">
                 <img
                     className="profile-image"
-                    src="..\..\src\images\IMG-20220624-WA0001.jpg"
+                    src="/images/mypic.jpg"
                     alt="Gaurav Chaudhary"
                 />
             </article>
