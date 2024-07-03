@@ -127,9 +127,12 @@ h1, h2, p {
 
 /* Read all container styling */
 .read-all-container {
+    align-items: center;
     text-align: center;
-    margin: 20px 0;
+    margin: auto;
+    margin-top: 20px; /* Adjust the value as needed */
 }
+
 
 .read-all {
     text-decoration: none;

@@ -58,6 +58,34 @@
 // };
 
 
+// import React from "react";
+// import { GrFacebook, GrInstagram } from "react-icons/gr";
+// import { FaTwitter, FaWhatsapp } from "react-icons/fa";
+// import "./Profile.css"; // Importing the new CSS file
+
+// export const Profile = () => {
+//     return (
+//         <div className="profile-container">
+//             <article className="profile-image-container">
+//                 <img
+//                     className="profile-image"
+//                     src="/images/mypic.jpg"
+//                     alt="Gaurav Chaudhary"
+//                 />
+//             </article>
+//             <article className="profile-text-container">
+//                 <h3 className="profile-name">Gaurav Chaudhary</h3>
+//                 <ul className="profile-social-links">
+//                     <li><GrFacebook className="social-icon" /></li>
+//                     <li><GrInstagram className="social-icon" /></li>
+//                     <li><FaTwitter className="social-icon" /></li>
+//                     <li><FaWhatsapp className="social-icon" /></li>
+//                 </ul>
+//             </article>
+//         </div>
+//     );
+// };
+
 import React from "react";
 import { GrFacebook, GrInstagram } from "react-icons/gr";
 import { FaTwitter, FaWhatsapp } from "react-icons/fa";
@@ -65,6 +93,9 @@ import "./Profile.css"; // Importing the new CSS file
 
 export const Profile = () => {
     return (
+        <div className="maincontainer">
+
+        
         <div className="profile-container">
             <article className="profile-image-container">
                 <img
@@ -76,13 +107,27 @@ export const Profile = () => {
             <article className="profile-text-container">
                 <h3 className="profile-name">Gaurav Chaudhary</h3>
                 <ul className="profile-social-links">
-                    <li><GrFacebook className="social-icon" /></li>
-                    <li><GrInstagram className="social-icon" /></li>
-                    <li><FaTwitter className="social-icon" /></li>
-                    <li><FaWhatsapp className="social-icon" /></li>
+                    <li>
+                        <GrFacebook className="social-icon" />
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/___mr._gaurav__1/?hl=en" target="_blank" rel="noopener noreferrer">
+                            <GrInstagram className="social-icon" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/rider_infinity3" target="_blank" rel="noopener noreferrer">
+                            <FaTwitter className="social-icon" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://wa.me/8650119836" target="_blank" rel="noopener noreferrer">
+                            <FaWhatsapp className="social-icon" />
+                        </a>
+                    </li>
                 </ul>
             </article>
         </div>
+        </div>
     );
 };
-

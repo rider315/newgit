@@ -57,7 +57,7 @@ export const Home = () => {
 
       {/* 2nd section  */}
       <Analytics />
-      <section id="portfolio">
+      {/* <section id="portfolio">
         <h2 class="center" data-aos="zoom-in-right">Portfolio -My past work samples</h2>
         <div class="content portfolio--content" data-aos="zoom-out-left">
           <div class="item1" id="particular_portfolio">
@@ -71,7 +71,7 @@ export const Home = () => {
           </div>
 
         </div>
-      </section>
+      </section> */}
 
       {/* 3rd section  */}
       <section className="section-hero">

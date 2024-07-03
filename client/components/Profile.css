@@ -1,18 +1,29 @@
 /* General Styles */
 body {
     font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
+    /* margin: 0;
+    padding: 0; */
     box-sizing: border-box;
 }
 
 h3, p {
-    margin: 0;
+    /* margin: 0; */
+}
+
+.maincontainer {
+    display: flex;
+    flex-direction: column; /* Change the direction to column for vertical centering */
+    align-items: center;
+    justify-content: center;
+     /* Full viewport height for vertical centering */
+    margin: auto;
+    margin-top: 70px;
 }
 .profile-container {
     display: flex;
     align-items: center;
-    padding: 20px;
+    justify-content: center;
+    /* padding: 20px; */
     
     margin: auto;
 }
