@@ -18,8 +18,14 @@ h1, p {
 }
 
 .blogpost-image {
+    align-items: center;
+    justify-content: center;
+    /* margin: auto; */
     width: 100%;
-    height: auto;
+    margin-left: 160px;
+    max-width: 800px; 
+    /* Set a maximum width */
+    height: 400px; /* Set a fixed height */
     object-fit: cover;
     border-radius: 20px;
     margin-bottom: 20px;
