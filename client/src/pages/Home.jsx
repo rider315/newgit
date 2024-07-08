@@ -22,6 +22,17 @@ export const Home = () => {
   return (
     <>
       <main>
+      <div class="taskbar">
+  <button class="menu-toggle">Menu</button>
+  <nav class="mobile-menu">
+    <ul>
+      <li><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+    </ul>
+  </nav>
+</div>
         <section className="section-hero">
           <div className="container grid grid-two-cols">
             <div className="hero-content">

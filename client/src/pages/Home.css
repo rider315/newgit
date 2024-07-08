@@ -95,7 +95,7 @@
   }
   
 
-  @media screen and (max-width: 768px) {
+  /* @media screen and (max-width: 768px) {
     #particular_portfolio {
     height: 30%;
     width: 40%;
@@ -112,7 +112,70 @@
     border-image-slice: 9;
     border-style: solid;
     }
-  }
+  } */
 
 
   
+
+  /* Responsive CSS for #particular_portfolio section */
+@media screen and (max-width: 768px) {
+  #particular_portfolio {
+    height: auto;
+    width: 90%;
+    flex-basis: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
+  #particular_portfolio img {
+    width: 100%;
+    height: auto;
+  }
+
+  #particular_portfolio:hover > h3 {
+    margin-top: 0;
+    opacity: 1;
+  }
+}
+.taskbar {
+  display: none; /* Hide taskbar by default */
+}
+
+@media screen and (max-width: 768px) {
+  .taskbar {
+    display: block; /* Show taskbar on smaller screens */
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333;
+    padding: 10px;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+  }
+
+  .mobile-menu {
+    display: none; /* Hide mobile menu by default */
+    text-align: center;
+  }
+
+  .mobile-menu.active {
+    display: block; /* Show mobile menu when active */
+  }
+
+  .mobile-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .mobile-menu ul li {
+    margin-bottom: 10px;
+  }
+
+  .mobile-menu ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+  }
+}
