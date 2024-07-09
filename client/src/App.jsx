@@ -18,6 +18,7 @@ import {Blog} from "./pages/Blog";
 import {Blogpost} from "./pages/Blogpost";
 import {Homeblog} from "./pages/Homeblog";
 // import AdSense from "../components/AdSense";
+
 import AdSenseScript from "../components/AdSenseScript";
 const App=()=>{
   return <>
