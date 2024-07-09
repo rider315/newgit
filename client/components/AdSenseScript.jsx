@@ -12,4 +12,5 @@ const AdSenseScript = () => (
   </Helmet>
 );
 
+
 export default AdSenseScript;
