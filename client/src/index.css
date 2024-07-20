@@ -1,3 +1,8 @@
+@media (max-width: 768px) {
+  .container {
+    padding: 0 16px;
+  }
+}
 
 @tailwind base;
 @tailwind components;
@@ -162,23 +167,29 @@ button {
 
 .section-contact .container {
   padding-top: 3.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .section-contact .contact-img {
   display: flex;
-  justify-content: start;
+  justify-content: center;
   align-items: center;
+  margin-bottom: 3.2rem;
 }
 
 .section-contact .contact-img img {
-  width: 80%;
+  width: 60%;
   height: auto;
+  max-width: 500px;
 }
 
 .section-contact .section-form form {
   display: flex;
   flex-direction: column;
   gap: 3.2rem;
+  width: 80%;
 }
 
 .section-contact .section-form label {
@@ -189,8 +200,67 @@ button {
 
 .section-contact .section-form input,
 .section-contact .section-form textarea {
-  width: 80%;
+  width: 10vw;
   padding: 0.4rem 0.6rem;
+}
+
+/* Target mobile devices */
+@media (max-width: 768px) {
+  .section-contact .container {
+    padding-top: 1.6rem;
+  }
+
+  .section-contact .contact-content {
+    padding: 0 1rem;
+    text-align: center;
+  }
+
+  .section-contact .contact-content h1 {
+    margin-bottom: 1.6rem;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .section-contact .contact-img {
+    margin-bottom: 1rem;
+  }
+
+  .section-contact .contact-img img {
+    width: 80%;
+    height: auto;
+  }
+
+  .section-contact .section-form form {
+    gap: 1.6rem;
+    width: 100%;
+  }
+
+  .section-contact .section-form label {
+    margin-bottom: 0.8rem;
+    font-size: 1.2rem;
+  }
+
+  .section-contact .section-form input,
+  .section-contact .section-form textarea {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    height: 50px;
+  }
+
+  .section-contact .section-form textarea {
+    height: 150px;
+  }
+
+  .section-contact .section-form button {
+    width: 100%;
+    padding: 0.8rem;
+    font-size: 1.2rem;
+  }
+
+  .section-contact .mb-3 iframe {
+    height: 300px;
+  }
 }
 
 button:hover {

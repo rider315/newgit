@@ -22,7 +22,7 @@ export const Home = () => {
   return (
     <>
       <main>
-      <div class="taskbar">
+      {/* <div class="taskbar">
   <button class="menu-toggle">Menu</button>
   <nav class="mobile-menu">
     <ul>
@@ -32,7 +32,7 @@ export const Home = () => {
       <li><a href="#">Contact</a></li>
     </ul>
   </nav>
-</div>
+</div> */}
         <section className="section-hero">
           <div className="container grid grid-two-cols">
             <div className="hero-content">

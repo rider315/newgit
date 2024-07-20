@@ -1,53 +1,98 @@
-/* Navbar.css */
-
 /* Header Styles */
 header {
-    background-color: transparent; /* Set background color to transparent */
-    padding: 10px 0; /* Padding for top and bottom */
+  background-color: transparent;
+  padding: 10px 0;
+}
+
+/* Container Styles */
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Logo Brand Styles */
+.logo-brand a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Navigation Styles */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  transition: transform 0.3s ease-in-out;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li:last-child {
+  margin-right: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 15px;
+}
+
+nav ul li a:hover {
+  color: #ffd700;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+}
+
+.hamburger .bar {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 4px 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 250px;
+    background-color: #333;
+    transform: translateX(-100%);
+    z-index: 1000; /* Added z-index to ensure the nav appears above other elements */
   }
-  
-  /* Container Styles */
-  .container {
-    display: flex;
-    justify-content: space-between; /* Align items with space in-between */
-    align-items: center; /* Center items vertically */
-    max-width: 1200px; /* Maximum width of the container */
-    margin: 0 auto; /* Center the container horizontally */
-    padding: 0 20px; /* Padding for left and right */
+
+  nav.nav-open {
+    transform: translateX(0);
   }
-  
-  /* Logo Brand Styles */
-  .logo-brand a {
-    text-decoration: none; /* Remove underline from the logo */
-    color: #fff; /* White text color */
-    font-size: 24px; /* Font size for the logo */
-    font-weight: bold; /* Bold font weight */
-  }
-  
-  /* Navigation Styles */
+
   nav ul {
-    list-style: none; /* Remove default list styling */
-    display: flex; /* Display navigation items in a row */
-    padding: 0;
-    margin: 0;
+    flex-direction: column;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
   }
-  
+
   nav ul li {
-    margin-right: 20px; /* Margin between navigation items */
+    margin: 20px 0;
   }
-  
-  nav ul li:last-child {
-    margin-right: 0; /* Remove margin for the last navigation item */
+
+  .hamburger {
+    display: flex;
   }
-  
-  nav ul li a {
-    text-decoration: none; /* Remove underline from navigation links */
-    color: #fff; /* White text color */
-    font-size: 20px; /* Font size for navigation links - adjusted */
-    padding: 10px 15px; /* Padding for navigation links - adjusted */
-  }
-  
-  nav ul li a:hover {
-    color: #ffd700; /* Change text color on hover */
-  }
-  
+}

@@ -5,7 +5,7 @@ import { useState } from "react";
 // import { useState } from "react";
 import { useAuth } from "../store/auth";
 
-
+import "./Contact.css";
 const defaultContactFormData = {
   username: "",
   email: "",
