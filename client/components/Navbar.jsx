@@ -96,6 +96,9 @@ export const Navbar = () => {
               <li>
                 <NavLink to="/homeblog" onClick={closeMenu}> Blogs </NavLink>
               </li>
+              <li>
+                <NavLink to="/privacypolicy" onClick={closeMenu}> Privacy Policy </NavLink>
+              </li>
 
               {isLoggedIn ? (
                 <li>

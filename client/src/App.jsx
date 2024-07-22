@@ -17,6 +17,8 @@ import { AdminUpdate } from "./pages/Admin-Update";
 import {Blog} from "./pages/Blog";
 import {Blogpost} from "./pages/Blogpost";
 import {Homeblog} from "./pages/Homeblog";
+import {Privacypolicy} from"./pages/Privacypolicy";
+
 // import AdSense from "../components/AdSense";
 
 import AdSenseScript from "../components/AdSenseScript";
@@ -37,6 +39,7 @@ const App=()=>{
          <Route path="/about" element={<About />} />
          <Route path="/contact" element={<Contact/>} />
          <Route path="/service" element={<Service />} /> 
+         <Route path="/privacypolicy" element={<Privacypolicy />} /> 
          <Route path="/register" element={<Register />} /> 
          <Route path="/login" element={<Login />} /> 
          <Route path="/logout" element={<Logout />} /> 
