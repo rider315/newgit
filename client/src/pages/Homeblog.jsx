@@ -96,7 +96,7 @@ export const Homeblog = () => {
             </section>
             <div className="read-all-container">
                 <Link to="/blog" className="read-all">
-                    Read all blog posts
+                    Read all Blog Posts
                 </Link>
             </div>
             {/* <Newsletter /> */}

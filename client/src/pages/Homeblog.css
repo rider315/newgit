@@ -54,7 +54,7 @@ h1, h2, p {
 .feature-body {
     font-size: 1rem;
     margin: 10px 0;
-    color: #555;
+    color: #fbfbfb;
 }
 
 .feature-read-more {
@@ -103,7 +103,7 @@ h1, h2, p {
 
 .story-author {
     font-size: 0.9rem;
-    color: #666; /* Different color for author */
+    color: #f0e4e4; /* Different color for author */
     margin-bottom: 10px;
 }
 
@@ -117,7 +117,7 @@ h1, h2, p {
     font-size: 1rem;
     line-height: 1.6;
     flex-grow: 1; /* Make the body text grow to take up available space */
-    color: #333; /* Different color for body text */
+    color: white;
 }
 
 .story-date {
